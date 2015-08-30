@@ -1,0 +1,16 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'idea'
+
+
+repositories {
+    mavenCentral()
+}
+
+mainClassName = "alexiuscrow.epl.Main"
+
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+}
