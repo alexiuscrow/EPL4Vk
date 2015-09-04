@@ -9,12 +9,12 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alexiuscrow.epl.controllers.FXMLParticipantListCell">
+<HBox fx:id="mainHBox" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="80.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Rectangle fx:id="onlineIndicator" fill="#d3d3d3" height="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="5.0" />
+      <Rectangle fx:id="onlineIndicator" fill="#d3d3d3" height="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="5.0" />
       <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="100.0" prefWidth="300.0" HBox.hgrow="ALWAYS">
          <children>
-            <ImageView fx:id="avatar" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="avatar" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
@@ -22,31 +22,37 @@
                   <Image url="@images/defaultUserAvatar.png" />
                </image>
             </ImageView>
-            <VBox maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="181.0">
+            <VBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="181.0">
                <HBox.margin>
                   <Insets left="10.0" />
                </HBox.margin>
                <children>
                   <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" />
-                  <Label fx:id="fullName" text="Unknown user name">
+                  <Label fx:id="fullName" prefHeight="0.0" text="Unknown user name">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
+                     <VBox.margin>
+                        <Insets top="-2.5" />
+                     </VBox.margin>
                   </Label>
-                  <Label fx:id="inviteStatus" text="Unkown invite status" />
+                  <Label fx:id="inviteStatus" text="Unkown invite status">
+                     <VBox.margin>
+                        <Insets top="-3.0" />
+                     </VBox.margin></Label>
                   <SplitMenuButton fx:id="btnShowPage" mnemonicParsing="false" text="Show page in browser">
                     <items>
                       <MenuItem fx:id="miWriteMsg" mnemonicParsing="false" text="Write message" />
                     </items>
                      <VBox.margin>
-                        <Insets top="5.0" />
+                        <Insets top="2.0" />
                      </VBox.margin>
                   </SplitMenuButton>
                </children>
             </VBox>
          </children>
          <HBox.margin>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            <Insets left="5.0" right="5.0" />
          </HBox.margin>
       </HBox>
    </children>
