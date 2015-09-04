@@ -1,23 +1,44 @@
 package alexiuscrow.epl.domain;
 
+import java.net.URI;
 import java.net.URL;
 
 /**
  * Created by Alexiuscrow on 30.08.2015.
  */
 public class Participant {
-
-    private URL imageURL;
+    private Long id;
+    private URI avatar;
     private URL userPageURL;
     private String fullName;
-    private Boolean called;
+    private Boolean invited;
+    private Boolean online;
 
-    public URL getImageURL() {
-        return imageURL;
+    public Participant() {}
+
+    public Participant(Long id, URI avatar, URL userPageURL, String fullName, Boolean invited, Boolean online) {
+        this.id = id;
+        this.avatar = avatar;
+        this.userPageURL = userPageURL;
+        this.fullName = fullName;
+        this.invited = invited;
+        this.online = online;
     }
 
-    public void setImageURL(URL imageURL) {
-        this.imageURL = imageURL;
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public URI getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(URI avatar) {
+        this.avatar = avatar;
     }
 
     public URL getUserPageURL() {
@@ -36,21 +57,31 @@ public class Participant {
         this.fullName = fullName;
     }
 
-    public Boolean getCalled() {
-        return called;
+    public Boolean isInvited() {
+        return invited;
     }
 
-    public void setCalled(Boolean called) {
-        this.called = called;
+    public void setInvited(Boolean invited) {
+        this.invited = invited;
+    }
+
+    public Boolean isOnline() {
+        return online;
+    }
+
+    public void setOnline(Boolean online) {
+        this.online = online;
     }
 
     @Override
     public String toString() {
         return "Participant{" +
-                "imageURL=" + imageURL +
+                "id=" + id +
+                ", avatar=" + avatar +
                 ", userPageURL=" + userPageURL +
                 ", fullName='" + fullName + '\'' +
-                ", called=" + called +
+                ", invited=" + invited +
+                ", online=" + online +
                 '}';
     }
 }
