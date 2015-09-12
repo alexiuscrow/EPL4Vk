@@ -58,7 +58,6 @@ public class ConfirmController {
             stage.close();
         });
 
-
         stage.setTitle(title);
         stage.setScene(new Scene(root));
         stage.showAndWait();
