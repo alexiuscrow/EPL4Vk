@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.geometry.*?>
-<?import javafx.scene.image.*?>
-<?import java.lang.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-
-<HBox fx:id="mainHBox" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="80.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<HBox fx:id="mainHBox" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="70.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Rectangle fx:id="onlineIndicator" fill="#d3d3d3" height="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="5.0" />
+      <Rectangle fx:id="onlineIndicator" fill="#d3d3d3" height="70.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="5.0" />
       <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="100.0" prefWidth="300.0" HBox.hgrow="ALWAYS">
          <children>
-            <ImageView fx:id="avatar" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="avatar" cache="true" cacheHint="QUALITY" fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
                <HBox.margin>
                   <Insets />
                </HBox.margin>
                <image>
-                  <Image url="@images/defaultUserAvatar.png" />
+                  <Image url="@images/defaultUserAvatar90.png" />
                </image>
             </ImageView>
             <VBox alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="181.0">
@@ -30,7 +30,7 @@
                   <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" />
                   <Label fx:id="fullName" prefHeight="0.0" text="Unknown user name">
                      <font>
-                        <Font name="System Bold" size="16.0" />
+                        <Font name="System" size="16.0" />
                      </font>
                      <VBox.margin>
                         <Insets top="-2.5" />
