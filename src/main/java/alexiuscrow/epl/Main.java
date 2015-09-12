@@ -29,7 +29,7 @@ public class Main extends Application {
     }
 
     private void closeProgram() {
-        Boolean answer = new ConfirmController().display("Title", "Suru U want to exit?");
+        Boolean answer = new ConfirmController().display("Exit", "Suru U want to exit?");
         if (answer)
             primaryStage.close();
     }
